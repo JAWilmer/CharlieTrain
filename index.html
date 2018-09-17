@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<title>Charlie's Trains</title>
+
+	<!-- Meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Style -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	 crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Hind" rel="stylesheet">
+	<link rel="reset" type="text/css" href="assets/style/reset.css">
+	<link rel="stylesheet" type="text/css" href="assets/style/style.css">
+
+	<!-- Scripts -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.5.0/firebase.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+	 crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+	 crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+	 crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>
+	<script src="assets/script/script.js"></script>
+</head>
+
+<body>
+	<div class="container">
+
+		<!-- Jumbotron -->
+		<div class="jumbotron">
+			<h1>Where's Charlie?</h1>
+			<hr>
+			<br>
+			<p class="lead">Here is the story of a man named Charlie. On a tragic and fateful day, he put ten cents in his
+				pocket, kissed his wife and family and went to ride on the MTA.</p>
+			<p class="lead">Did he ever return? No! He never returned and his fate is still unlearned. Observe his know path and
+				suggest additional trains that Charlie might have taken. Otherwise, he may ride forever ‘neath the streets of
+				Boston and be the man who never returned.</p>
+			<br>
+
+			<!-- Button to trigger modal -->
+			<button type="button" class="btn charliesStory" data-toggle="modal" data-target="#ModalLong">
+				Charlie's Story
+			</button>
+
+			<!-- Modal -->
+			<div class="modal fade" id="ModalLong" tabindex="-1" role="dialog" aria-labelledby="ModalLongTitle" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h4>The Kingston Trio: The M.T.A.</h4>
+
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
+							<div class='embed-container'><iframe src='https://www.youtube.com/embed/S7Jw_v3F_Q0' frameborder='0'
+								 allowfullscreen></iframe></div>
+							<br>
+							<p>These are the times that try men's souls</p>
+							<p>In the course of our nation's history the people of Boston have rallied bravely whenever the rights of men
+								have been threatened</p>
+							<p>Today a new crisis has arisen</p>
+							<p>The Metropolitan Transit Authority, better known as the M.T.A.</p>
+							<p>Is attempting to levy a burdensome tax on the population in the form of a subway fare increase</p>
+							<p>Citizens, hear me out, this could happen to you!</p>
+							<p>Well, let me tell you of the story of a man named Charlie</p>
+							<p>On a tragic and fateful day</p>
+							<p>He put ten cents in his pocket, kissed his wife and family</p>
+							<p>Went to ride on the MTA</p>
+							<p>Well, did he ever return?</p>
+							<p>No he never returned and his fate is still unlearned (what a pity)</p>
+							<p>He may ride forever 'neath the streets of Boston</p>
+							<p>He's the man who never returned</p>
+							<p>Charlie handed in his dime at the Kendall Square station</p>
+							<p>And he changed for Jamaica Plain</p>
+							<p>When he got there the conductor told him, "one more nickel"</p>
+							<p>Charlie couldn't get off of that train!</p>
+							<p>But did he ever return?</p>
+							<p>No he never returned and his fate is still unlearned (poor old Charlie)</p>
+							<p>He may ride forever 'neath the streets of Boston</p>
+							<p>He's the man who never returned</p>
+							<p>Now, all night long Charlie rides through the station</p>
+							<p>Crying, "what will become of me?</p>
+							<p>How can I afford to see my sister in Chelsea</p>
+							<p>Or my cousin in Roxbury?"</p>
+							<p>But did he ever return?</p>
+							<p>No he never returned and his fate is still unlearned (poor old Charlie)</p>
+							<p>He may ride forever 'neath the streets of Boston</p>
+							<p>He's the man who never returned</p>
+							<p>Charlie's wife goes down to the Scollay Square station</p>
+							<p>Every day at quarter past two</p>
+							<p>And through the open window she hands Charlie a sandwich</p>
+							<p>As the train comes rumbling through!</p>
+							<p>But did he ever return?</p>
+							<p>No he never returned and his fate is still unlearned (poor old Charlie)</p>
+							<p>He may ride forever 'neath the streets of Boston</p>
+							<p>He's the man who never returned</p>
+							<p>Now, you citizens of Boston, don't you think it's a scandal</p>
+							<p>How the people have to pay and pay?</p>
+							<p>Fight the fare increase, vote for George O'Brian</p>
+							<p>Get poor Charlie off the MTA!</p>
+							<p>Or else he'll never return</p>
+							<p>No he'll never return and his fate is still unlearned (just like Paul Revere)</p>
+							<p>He may ride forever 'neath the streets of Boston</p>
+							<p>He's the man who never returned</p>
+							<p>He's the man who never returned</p>
+							<p>He's the man who never returned</p>
+							<p>Et tu, Charlie?</p>
+							<p>Songwriters: Bess Hawes / Jacqueline Steiner</p>
+							<p>The M.T.A. lyrics © Universal Music Publishing Group</p>
+
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn modalButton" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> 
+
+		<!--Charlie's Trains Card-->
+		<div class="card">
+			<div class="card-header">
+				<h3 class="card-title">Charlie's Trains</h3>
+			</div>
+
+			<div class="card-body">
+				<table class="table table-hover" id='train-table'>
+					<thead>
+						<tr>
+							<th>Train Name</th>
+							<th>Destination</th>
+							<th>Frequency (min)</th>
+							<th>Next Arrival</th>
+							<th>Minutes Away</th>
+						</tr>
+					</thead>
+					<tbody>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<br>
+
+		<!--Add Train Form Card-->
+		<div class="card">
+			<div class="card-header">
+				<h3 class="card-title">Add a Train</h3>
+			</div>
+
+			<div class="card-body">
+				<form>
+					<div class="form-group">
+						<label for="train-name-input">Train Name</label>
+						<input class="form-control" id="train-name-input" type="text" placeholder="Green Line">
+					</div>
+					<div class="form-group">
+						<label for="dest-input">Destination</label>
+						<input class="form-control" id="dest-input" type="text" placeholder="Government Center">
+					</div>
+					<div class="form-group">
+						<label for="firstTrain-input">First Train Time (HH:MM)</label>
+						<input class="form-control" id="firstTrain-input" type="text" placeholder="06:30">
+					</div>
+					<div class="form-group">
+						<label for="freq-input">Frequency (min)</label>
+						<input class="form-control" id="freq-input" type="text" placeholder="20">
+					</div>
+					<button class="btn" id="add-train-btn" type="submit">Submit</button>
+				</form>
+			</div>
+		</div> 
+
+	</div>
+</body>
+
+</html>
