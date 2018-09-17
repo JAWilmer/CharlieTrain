@@ -1,1 +1,59 @@
+/* green: #0e9d6f */
+/* orange:  #f79521 */
+/* blue:  #128bcf */
+/* red:  #e43037 */
+/* light blue: #d1eefc */
+/* medium grey: #9d9e9e */
+/* dark bluish grey: #43464b */
+
+
+
+body {
+    background: url("../images/cropped_unofficial_MBTA_subway_map_by_Michael_Kvrivishvili.png");
+	background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Hind', sans-serif;
+}
+h1 {
+    color:#d1eefc;
+    font-weight: bolder;
+}
+
+.jumbotron {
+    margin-top: 3%;
+    padding-bottom: 3%;
+    background-color: #128bcf;
+    color:#d1eefc;
+}
+
+hr {
+    height: 1px;
+    background-color: #d1eefc;
+    border-color: #d1eefc;
+    color: #d1eefc;
+}
+
+#ModalLong {
+    color: #43464b;
+}
+
+.btn.charliesStory {
+    background-color:#d1eefc; 
+    color: #128bcf;
+}
+
+.btn.modalButton {
+    background-color: #43464b;
+    color: white;
+}
+
+.card-header {
+    background-color: #128bcf;
+    color:#d1eefc;
+}
+
+#add-train-btn {
+    color:#d1eefc; 
+    background-color: #128bcf;
+}
 
