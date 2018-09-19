@@ -8,8 +8,8 @@ $(document).ready(function () {
 		projectId: "charlieapp-b60aa",
 		storageBucket: "charlieapp-b60aa.appspot.com",
 		messagingSenderId: "906694568886"
-	  };
-	  firebase.initializeApp(config);
+	};
+	firebase.initializeApp(config);
 
 	var database = firebase.database();
 
@@ -63,12 +63,12 @@ $(document).ready(function () {
 		var firstTime = 0;
 
 		// Use Moment to convert times
-		var firstTimeConverted = moment(firstTime, "HH:MM").subtract(1, "years");
+		var firstTimeConverted = moment(firstTime, "HH:mm").subtract(1, "years");
 		console.log(firstTimeConverted);
 
 		// Current Time
 		var currentTime = moment();
-		console.log("CURRENT TIME: " + moment(currentTime).format("HH:MM"));
+		console.log("CURRENT TIME: " + moment(currentTime).format("HH:mm"));
 
 		// Difference between times
 		var diffTime = moment().diff(moment(firstTimeConverted), "minutes");
@@ -84,11 +84,11 @@ $(document).ready(function () {
 
 		// Next train arriving
 		var nextTrain = moment().add(tMinutesTillTrain, "minutes");
-		console.log("ARRIVAL TIME: " + moment(nextTrain).format("HH:MM"));
+		console.log("ARRIVAL TIME: " + moment(nextTrain).format("HH:mm"));
 
 		// Add train data to table
 		$("#train-table > tbody").append("<tr><td>" + trainName + "</td><td>" + trainDest + "</td><td>" + trainFreq +
-			"</td><td>" + moment(nextTrain).format("HH:MM") + "</td><td>" + tMinutesTillTrain + "</td></tr>");
+			"</td><td>" + moment(nextTrain).format("HH:mm") + "</td><td>" + tMinutesTillTrain + "</td></tr>");
 	});
 
 });
